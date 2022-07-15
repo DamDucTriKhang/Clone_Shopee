@@ -1,0 +1,103 @@
+<!-- BODY BLOCK -->
+    <main class="main_container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar_top">
+          <img src="http://images6.fanpop.com/image/photos/36500000/Anime-image-anime-36567938-505-600.jpg" alt="avatar" class="user_avatar" />
+          <div class="info_wrap">
+            <div class="user_name"><%= current_user&.username%></div>
+            <button class="edit_info_btn">
+              <img src="http://127.0.0.1:3000/assets/icons/ic_pencil.svg" alt="icon edit" class="icon_edit_info" />
+              <span class="edit_info_text"><%= t('.edit') %></span>
+            </button>
+          </div>
+        </div>
+
+        <ul class="sidebar_below">
+          <li class="sidebar_menu_item">
+            <img src="http://127.0.0.1:3000/assets/icons/ic_person.svg" alt="menu icon" class="sidebar_item_icon active_menu" />
+            <span class="sidebar_item_text active_menu"><%= t('.name') %></span>
+          </li>
+
+          <div class="sidebar_sub_menu">
+            <div class="sidebar_sub_item_text active_menu"><%= t('.Profile') %></div>
+            <div class="sidebar_sub_item_text"><%= t('.bank') %></div>
+            <div class="sidebar_sub_item_text"><%= t('.address') %></div>
+            <div class="sidebar_sub_item_text"><%= t('.change_password') %></div>
+          </div>
+
+          <li class="sidebar_menu_item">
+            <img src="http://127.0.0.1:3000/assets/icons/ic_list.svg" alt="menu icon" class="sidebar_item_icon" />
+            <span class="sidebar_item_text"><%= t('.purchase_order') %></span>
+          </li>
+
+          <li class="sidebar_menu_item">
+            <img src="http://127.0.0.1:3000/assets/icons/ic_bell.svg" alt="menu icon" class="sidebar_item_icon" />
+            <span class="sidebar_item_text"><%= t('.notify') %></span>
+          </li>
+
+          <li class="sidebar_menu_item">
+            <img src="http://127.0.0.1:3000/assets/icons/ic_voucher.svg" alt="menu icon" class="sidebar_item_icon" />
+            <span class="sidebar_item_text"><%= t('.voucher') %></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main_content">
+        <div class="main_content_head">
+          <h3 class="content_head_title"><%= t('.my_profile') %></h3>
+          <div class="content_head_desc"><%= t('.manage_profile') %></div>
+        </div>
+        <div class="main_content_body">
+          <%= form_for current_user do |f| %>
+            <form class="content_body_info">
+              <div class="content_body_field">
+                <div class="content_form_label"><%= t('.user_name') %></div>
+                <div class="content_body_value">
+									<%= f.text_field :username %>
+								</div>
+              </div>
+
+              <div class="content_body_field">
+                <div class="content_form_label"><%= t('.email') %></div>
+								<div class="content_body_value">
+									<%= f.email_field :email %>
+								</div>
+              </div>
+
+              <div class="content_body_field">
+                <div class="content_form_label"><%= t('.password') %></div>
+                <div class="content_body_value">
+									<%= f.password_field :password %>
+								</div>
+              </div>
+
+              <div class="content_body_field">
+                <div class="content_form_label"></div>
+                <div class="content_body_value">
+                  <button class="content_body_btn"><%= t('.Submit') %></button>
+                </div>
+              </div>
+            </form>
+          <% end %>
+
+          <div class="content_body_image">
+            <div class="content_body_image_wrap">
+              <img src="http://images6.fanpop.com/image/photos/36500000/Anime-image-anime-36567938-505-600.jpg" alt="edit_avatar" class="content_body_image_display" />
+              <label for="image" class="content_body_image_btn">
+                <input id="image" type="file" class="content_body_image_file" />
+              </label>
+
+              <div class="content_body_image_desc">
+                <%= t('.usage') %> <br />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER BLOCK -->
+    <footer></footer>

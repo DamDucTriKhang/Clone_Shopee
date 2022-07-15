@@ -2,18 +2,40 @@
 	<div class="header_container">
 		<div class="header_top">
 			<div class="header_top_left">
-				<span class="header_top_left_item">Kênh Người Bán </span>
-				<span class="header_top_left_item">Tải ứng dụng</span>
-				<span class="header_top_left_item">Kết nối </span>
+				<span class="header_top_left_item"><%= t('.seller_channel') %></span>
+				<span class="header_top_left_item"><%= t('.download') %></span>
+				<span class="header_top_left_item"><%= t('.connection') %> </span>
 			</div>
 
 			<div class="header_top_right">
-				<span>Thông báo</span>
-				<span>Hỗ Trợ</span>
-				<span>Tiếng Việt</span>
+				<span><%= t('.notify') %></span>
+				<span><%= t('.support') %></span>
+				<div class="dropdown">
+							<button class="dropbtn">
+								<%= t('.vietnamese') %>
+							</button>
+							<div class="dropdown-content">
+								<%= link_to t('.english'), locale:"en", class: "dropdown-item" %>
+								<%= link_to t('.vietnamese'), locale:"vi", class: "dropdown-item" %>
+							</div>
+						</div>
 				<span class="header_top_right_avt_group">
 					<img src="https://i.pinimg.com/736x/b1/d3/a6/b1d3a6d64e26399b57e51b0bd77c6c19.jpg" alt="avatar" class="header_top_right_avt">
-					<span>Khang Dam</span>
+					<% if current_user.present? %>
+						<div class="dropdown">
+							<button class="dropbtn">
+								<%= current_user&.username%>
+							</button>
+							<div class="dropdown-content">
+								<%= link_to t('my_profile'), user_path(id: current_user.id), class: "dropdown-item" %>
+								<%= link_to t('.logout'), destroy_user_session_path, class: "dropdown-item" %>
+							</div>
+						</div>
+					<% else %>
+						<li class="nav-item login">
+							<%= link_to t('.login'), user_session_path, class: "nav-link" %>
+						</li>
+        	<% end%>
 				</span>
 			</div>
 		</div>
