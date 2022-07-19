@@ -49,10 +49,21 @@ en:
       usage: "Maximum file size 1 MB Format: .JPEG, .PNG"
       user name: "User name"
 
+    sidebar:
+      name: "Name"
+      edit: "Edit Profile"
+      profile: "Profile"
+      bank: "Bank"
+      address: "Address"
+      change_password: "Change Password"
+      purchase_order: "Purchase Order"
+      notify: "Notify"
+      voucher: "Voucher"
+
   layouts:
     header:
       seller_channel: "Seller Channel"
-      download: "download"
+      download: "Download"
       connection: "Connection"
       notify: "Notify"
       support: "Support"

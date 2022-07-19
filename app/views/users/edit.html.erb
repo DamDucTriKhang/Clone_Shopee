@@ -1,0 +1,61 @@
+<!-- BODY BLOCK -->
+<main class="main_container">
+  <%= render 'sidebar'%>
+  <!-- Main Content -->
+  <div class="main_content">
+    <div class="main_content_head">
+      <h3 class="content_head_title"><%= t('.my_profile') %></h3>
+      <div class="content_head_desc"><%= t('.manage_profile') %></div>
+    </div>
+
+    <div class="main_content_body">
+      <%= form_for current_user do |f| %>
+        <form class="content_body_info">
+          <div class="content_body_field">
+            <div class="content_form_label"><%= t('.user_name') %></div>
+            <div class="content_body_value">
+              <%= f.text_field :username %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_form_label"><%= t('.email') %></div>
+            <div class="content_body_value">
+              <%= f.email_field :email %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_form_label"><%= t('.password') %></div>
+            <div class="content_body_value">
+              <%= f.password_field :password %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_form_label"><%= t('.Submit')  %></div>
+            <div class="content_body_value">
+                <%= f.submit %>
+            </div>
+          </div>
+        </form>
+      <% end %>
+
+      <div class="content_body_image">
+        <div class="content_body_image_wrap">
+          <img src="http://images6.fanpop.com/image/photos/36500000/Anime-image-anime-36567938-505-600.jpg" alt="edit_avatar" class="content_body_image_display" />
+          <label for="image" class="content_body_image_btn">
+            <input id="image" type="file" class="content_body_image_file" />
+          </label>
+
+          <div class="content_body_image_desc">
+            <%= t('.usage') %> <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER BLOCK -->
+<footer></footer>
