@@ -46,7 +46,6 @@ en:
       password: "Password"
       manage_profile: "Manage profile information for account security"
       submit: "Submit"
-      usage: "Maximum file size 1 MB Format: .JPEG, .PNG"
       user name: "User name"
 
     sidebar:
@@ -59,6 +58,10 @@ en:
       purchase_order: "Purchase Order"
       notify: "Notify"
       voucher: "Voucher"
+
+    edit:
+      submit: "Submit"
+      usage: "Maximum file size 1 MB Format: .JPEG, .PNG"
 
   layouts:
     header:
@@ -73,4 +76,25 @@ en:
       login: "Login"
       my_profile: "My profile"
 
- 
+  controllers:
+    contacts:
+      create:
+        contact_created: "Contact created"
+        contact_no_create: "Contact no create!"
+
+  contacts:
+    new:
+      new_address: "New_address"
+      first_last_name: "First last name"
+      phone: "Phone number"
+      address: "Address"
+      address_type: "Address type :"
+      home: "Home"
+      company: "Company"
+      submit: "Submit"
+
+  enums:
+    contact:
+      contact_type:
+        home: "Home"
+        company: "Company"
