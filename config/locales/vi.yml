@@ -17,6 +17,17 @@ vi:
       submit: "nộp"
       usage: "Quản lý thông tin hồ sơ để bảo mật tài khoản"
       user_name: "Tên đăng nhập"
+    
+    sidebar:
+      name: "Tên"
+      edit: "Sửa Hồ Sơ"
+      profile: "Hồ Sơ"
+      bank: "Ngân hàng"
+      address: "Địa chỉ"
+      change_password: "Đổi mật khẩu"
+      purchase_order: "Đơn mua"
+      notify: "Thông báo"
+      voucher: "Mã giảm giá"
 
   layouts:
     header:
@@ -30,3 +41,4 @@ vi:
       logout: "Đăng xuất"
       login: "Đăng nhập"
       my_profile: "Hồ sơ của tôi"
+    

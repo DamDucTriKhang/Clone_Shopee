@@ -1,0 +1,41 @@
+<div class="sidebar">
+  <div class="sidebar_top">
+    <img src="https://i.pinimg.com/736x/b1/d3/a6/b1d3a6d64e26399b57e51b0bd77c6c19.jpg" alt="avatar" class="user_avatar" />
+    <div class="info_wrap">
+      <div class="user_name"><%= current_user&.username%></div>
+      <button class="edit_info_btn">
+        <img src="http://127.0.0.1:3000/assets/icons/ic_pencil.svg" alt="icon edit" class="icon_edit_info" />
+        <span class="edit_info_text"><%= t('.edit') %></span>
+      </button>
+    </div>
+  </div>
+
+  <ul class="sidebar_below">
+    <li class="sidebar_menu_item">
+      <img src="http://127.0.0.1:3000/assets/icons/ic_person.svg" alt="menu icon" class="sidebar_item_icon active_menu" />
+      <span class="sidebar_item_text active_menu"><%= t('.name') %></span>
+    </li>
+
+    <div class="sidebar_sub_menu">
+      <div class="sidebar_sub_item_text active_menu"><%= t('.Profile') %></div>
+      <div class="sidebar_sub_item_text"><%= t('.bank') %></div>
+      <div class="sidebar_sub_item_text"><%= t('.address') %></div>
+      <div class="sidebar_sub_item_text"><%= t('.change_password') %></div>
+    </div>
+
+    <li class="sidebar_menu_item">
+      <img src="http://127.0.0.1:3000/assets/icons/ic_list.svg" alt="menu icon" class="sidebar_item_icon" />
+      <span class="sidebar_item_text"><%= t('.purchase_order') %></span>
+    </li>
+
+    <li class="sidebar_menu_item">
+      <img src="http://127.0.0.1:3000/assets/icons/ic_bell.svg" alt="menu icon" class="sidebar_item_icon" />
+      <span class="sidebar_item_text"><%= t('.notify') %></span>
+    </li>
+
+    <li class="sidebar_menu_item">
+      <img src="http://127.0.0.1:3000/assets/icons/ic_voucher.svg" alt="menu icon" class="sidebar_item_icon" />
+      <span class="sidebar_item_text"><%= t('.voucher') %></span>
+    </li>
+  </ul>
+</div>

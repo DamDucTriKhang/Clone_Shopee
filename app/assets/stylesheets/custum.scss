@@ -361,6 +361,7 @@ filter: invert(36%) sepia(80%) saturate(2240%) hue-rotate(345deg) brightness(97%
 .main_content_body{
   padding-top: 30px;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(4 , 1fr);
 }
 .content_body_info{
@@ -708,4 +709,9 @@ select:hover{
 
 .nav-link{
   color: white;
+}
+
+.alert-success{
+  display: flex;
+  justify-content: center;
 }

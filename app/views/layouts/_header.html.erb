@@ -27,7 +27,7 @@
 								<%= current_user&.username%>
 							</button>
 							<div class="dropdown-content">
-								<%= link_to t('my_profile'), user_path(id: current_user.id), class: "dropdown-item" %>
+								<%= link_to t('.my_profile'), user_path(id: current_user.id), class: "dropdown-item" %>
 								<%= link_to t('.logout'), destroy_user_session_path, class: "dropdown-item" %>
 							</div>
 						</div>
@@ -42,4 +42,7 @@
 
 		<div class="header_below"></div>
 	</div>
+	<% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
 </header>
