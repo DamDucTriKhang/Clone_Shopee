@@ -1,0 +1,10 @@
+<main class="main_container">
+  <%= render 'users/sidebar'%>
+  <div>
+   <% @contacts.each do |contact| %>
+    <%= contact.contact_name %>
+    <%= contact.address %>
+    <%= contact.phone %>
+   <% end %> 
+  </div>
+</main>
