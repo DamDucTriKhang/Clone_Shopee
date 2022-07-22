@@ -1,0 +1,50 @@
+<main class="main_container">
+  <%= render 'users/sidebar'%>
+  <!-- Main Content -->
+  <div class="main_content">
+    <div class="main_content_head">
+      <h3 class="content_head_title"><%= t('.new_address') %></h3>
+    </div>
+
+    <div class="main_content_body">
+      <%= form_for @contact do |f| %>
+        <form class="content_body_info">
+          <div class="content_body_field">
+            <div class="content_body_value">
+              <%= f.text_field :contact_name, class: "form-control", placeholder: t('.first_last_name') %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_body_value">
+              <%= f.text_field :phone, class: "form-control", placeholder: t('.phone') %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_body_value">
+              <%= f.text_field :address, class: "form-control", placeholder: t('.address') %>
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_body_value">
+              <div class ="content_body_value_text" ><%= t('.address_type') %></div>
+              <%= f.select :contact_type, Contact.contact_types_i18n.invert %>
+              <!--<%= f.select :contact_type, [t('.home'), t('.Company')]%>-->
+            </div>
+          </div>
+
+          <div class="content_body_field">
+            <div class="content_form_label_detail">
+              <div class="content_form_label"></div>
+              <div class="content_body_value">
+                <%= f.submit t('.submit'), class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </form>
+      <% end %>
+    </div>
+  </div>
+</main>

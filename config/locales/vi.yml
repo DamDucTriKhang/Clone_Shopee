@@ -15,7 +15,6 @@ vi:
       password: "Mật khẩu"
       manage_profile: "Quản lý thông tin hồ sơ để bảo mật tài khoản"
       submit: "nộp"
-      usage: "Quản lý thông tin hồ sơ để bảo mật tài khoản"
       user_name: "Tên đăng nhập"
     
     sidebar:
@@ -29,6 +28,10 @@ vi:
       notify: "Thông báo"
       voucher: "Mã giảm giá"
 
+    edit:
+      submit: "nộp"
+      usage: "Kích thước tệp tối đa 1 MB Định dạng: .JPEG, .PNG"
+
   layouts:
     header:
       seller_channel: "Người bán"
@@ -41,4 +44,26 @@ vi:
       logout: "Đăng xuất"
       login: "Đăng nhập"
       my_profile: "Hồ sơ của tôi"
-    
+
+  controllers:
+    contacts:
+      create:
+        contact_created: "Tạo thành công"
+        contact_no_create: "Tạo không thành công"
+
+  contacts:
+    new:
+      new_address: "Địa chỉ mới"
+      first_last_name: "Họ và tên"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      address_type: "Loại địa chỉ :"
+      home: "Nhà"
+      company: "Công ty"
+      submit: "nộp"
+
+  enums:
+    contact:
+      contact_type:
+        home: "Nhà"
+        company: "Công ty"
