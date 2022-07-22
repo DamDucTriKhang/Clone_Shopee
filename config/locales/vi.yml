@@ -51,9 +51,16 @@ vi:
         contact_created: "Tạo thành công"
         contact_no_create: "Tạo không thành công"
 
+      edit:
+        access: "Bạn không có quyền truy cập"
+        find_contact: "Không tìm thấy liên hệ"
+
+      update:
+        contact_update: "Cập nhật thành công"
+        contact_fail_update: "Cập nhật thất bại"
+
   contacts:
-    new:
-      new_address: "Địa chỉ mới"
+    form_contact:
       first_last_name: "Họ và tên"
       phone: "Số điện thoại"
       address: "Địa chỉ"
@@ -61,6 +68,12 @@ vi:
       home: "Nhà"
       company: "Công ty"
       submit: "nộp"
+
+    new:
+      new_address: "Địa chỉ mới"
+
+    edit:
+      edit_address: "Sửa địa chỉ"
 
   enums:
     contact:

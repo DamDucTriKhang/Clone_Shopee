@@ -81,10 +81,17 @@ en:
       create:
         contact_created: "Contact created"
         contact_no_create: "Contact no create!"
+      
+      edit:
+        access: "You do not have access"
+        find_contact: "Not found contact"
+
+      update:
+        contact_update: "Contact updated!"
+        contact_fail_update: "Contact update fail"
 
   contacts:
-    new:
-      new_address: "New_address"
+    form_contact:
       first_last_name: "First last name"
       phone: "Phone number"
       address: "Address"
@@ -92,6 +99,12 @@ en:
       home: "Home"
       company: "Company"
       submit: "Submit"
+
+    new:
+      new_address: "New address"
+
+    edit:
+      edit_address: "Edit address"
 
   enums:
     contact:
