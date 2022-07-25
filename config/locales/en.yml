@@ -90,6 +90,13 @@ en:
         contact_update: "Contact updated!"
         contact_fail_update: "Contact update fail"
 
+      destroy:
+        contact_delete: "contact_delete"
+
+      find_contact:
+        contact_fail_find: "contact does not exist"
+
+
   contacts:
     form_contact:
       first_last_name: "First last name"
@@ -105,6 +112,15 @@ en:
 
     edit:
       edit_address: "Edit address"
+
+    show:
+      first_last_name: "First last name"
+      phone: "Phone"
+      address: "Address"
+      address_type: "Address Type :"
+      my_address: "My address"
+      update: "Update"
+      delete: "Delete"
 
   enums:
     contact:

@@ -5,7 +5,11 @@
       <div class="user_name"><%= current_user&.username%></div>
       <button class="edit_info_btn">
         <img src="http://127.0.0.1:3000/assets/icons/ic_pencil.svg" alt="icon edit" class="icon_edit_info" />
-        <span class="edit_info_text"><%= t('.edit') %></span>
+        <span class="edit_info_text">
+          <div class= "content_body_link1">
+            <%= link_to t('.edit'), edit_user_path(current_user) %>
+        </div>
+        </span>
       </button>
     </div>
   </div>
@@ -17,9 +21,15 @@
     </li>
 
     <div class="sidebar_sub_menu">
-      <div class="sidebar_sub_item_text active_menu"><%= t('.profile') %></div>
+      <div class="sidebar_sub_item_text active_menu">
+        <%= link_to t('.profile'), user_path(id: current_user.id) %>
+      </div>
       <div class="sidebar_sub_item_text"><%= t('.bank') %></div>
-      <div class="sidebar_sub_item_text"><%= t('.address') %></div>
+      <div class="sidebar_sub_item_text">
+        <div class= "content_body_link1">
+          <%= link_to t('.address'), contact_path(current_user) %>
+        </div>
+      </div>
       <div class="sidebar_sub_item_text"><%= t('.change_password') %></div>
     </div>
 

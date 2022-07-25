@@ -1,18 +1,19 @@
 class ContactsController < ApplicationController
-  before_action :find_contact, only: [:edit, :update]
+  before_action :find_contact, only: [:edit, :update, :destroy]
 
 	def new
 		@contact = Contact.new
 	end
 
-  def index
+  def show
+    @contacts = current_user.contacts
   end
 
 	def create
     @contact = current_user.contacts.build(contacts_params)
     if @contact.save
       flash[:success] = t("controllers.contacts.create.contact_created")
-      redirect_to contacts_path
+      redirect_to contact_path(current_user)
     else
       flash[:danger] = t("controllers.contacts.create.contact_no_create")
       render :new
@@ -23,7 +24,7 @@ class ContactsController < ApplicationController
     if @contact.present?
       unless @contact.user.id == current_user.id
         flash[:danger] = t("controllers.contacts.edit.access")
-        redirect_to contacts_path
+        redirect_to contact_path
       end
     else
       flash[:danger] = t("controllers.contacts.edit.find_contact")
@@ -34,11 +35,17 @@ class ContactsController < ApplicationController
   def update
     if @contact.update(contacts_params)
       flash[:success] = t("controllers.contacts.update.contact_update")
-      redirect_to contacts_path
+      redirect_to contact_path(current_user)
     else
       flash[:danger] = t("controllers.contacts.update.contact_fail_update")
       render :edit
     end
+  end
+
+  def destroy
+    @contact.destroy
+    flash[:success] = t("controllers.contacts.destroy.contact_delete")
+    redirect_to contact_path
   end
 
 	private
@@ -49,5 +56,9 @@ class ContactsController < ApplicationController
 
     def find_contact
       @contact = Contact.find_by(id: params[:id])
+      if @contact.nil?
+        flash[:danger] = t("controllers.contacts.find_contact.contact_fail_find")
+        redirect_to contact_path
+      end
     end
 end
