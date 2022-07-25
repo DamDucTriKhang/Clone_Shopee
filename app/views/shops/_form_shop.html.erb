@@ -1,0 +1,39 @@
+<div class="main_content_body">
+  <%= form_for @shop do |f| %>
+    <form class="content_body_info">
+      <div class="content_body_field">
+        <div class="content_body_value">
+          <%= f.text_field :name, class: "form-control", placeholder: t('.name')%>
+          <%= f.hidden_field :user_id, value: current_user.id, class: "form-control", placeholder: t('.name')%>
+        </div>
+      </div>
+
+      <div class="content_body_field">
+        <div class="content_body_value">
+          <%= f.text_field :description, class: "form-control", placeholder: t('.description') %>
+        </div>
+      </div>
+
+      <div class="content_body_field">
+        <div class="content_body_value">
+          <%= f.text_field :address, class: "form-control", placeholder: t('.address') %>
+        </div>
+      </div>
+
+      <div class="content_body_field">
+        <div class="content_body_value">
+          <%= f.text_field :phone, class: "form-control", placeholder: t('.phone') %>
+        </div>
+      </div>
+
+      <div class="content_body_field">
+        <div class="content_form_label_detail">
+          <div class="content_form_label"></div>
+          <div class="content_body_value">
+            <%= f.submit t('.submit'), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </form>
+  <% end %>
+</div>

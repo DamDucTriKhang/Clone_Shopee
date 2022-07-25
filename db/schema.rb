@@ -85,12 +85,14 @@ ActiveRecord::Schema.define(version: 2022_07_21_034841) do
   end
 
   create_table "shops", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "name"
     t.text "description"
     t.string "address"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_shops_on_user_id"
   end
 
   create_table "stocks", force: :cascade do |t|
@@ -140,6 +142,7 @@ ActiveRecord::Schema.define(version: 2022_07_21_034841) do
   add_foreign_key "orders", "vouchers"
   add_foreign_key "products", "shops"
   add_foreign_key "purchases", "stocks"
+  add_foreign_key "shops", "users"
   add_foreign_key "stocks", "products"
   add_foreign_key "user_vouchers", "users"
   add_foreign_key "user_vouchers", "vouchers"
