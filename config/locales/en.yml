@@ -76,6 +76,20 @@ en:
       login: "Login"
       my_profile: "My profile"
 
+  shops:
+    form_shop:
+      name: "name"
+      description: "description"
+      address: "address"
+      phone: "phone"
+      submit: "submit"
+
+    new:
+      create_shop: "Create_shop"
+
+    edit:
+      edit_shop: "Edit shop"
+
   controllers:
     contacts:
       create:
@@ -95,6 +109,14 @@ en:
 
       find_contact:
         contact_fail_find: "contact does not exist"
+    
+    shops:
+      create:
+        shop_created: "Shop created"
+        shop_no_create: "Shop no create!"
+
+      find_shop:
+        contact_fail_find: "Không tìm thấy liên hệ"
 
 
   contacts:

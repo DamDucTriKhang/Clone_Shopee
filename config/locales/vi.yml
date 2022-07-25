@@ -45,6 +45,20 @@ vi:
       login: "Đăng nhập"
       my_profile: "Hồ sơ của tôi"
 
+  shops:
+    form_shop:
+      name: "Tên"
+      description: "Chi tiết cửa hàng"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      submit: "nộp"
+    
+    new:
+      create_shop: "Tạo cửa hàng"
+
+    edit:
+      edit_shop: "Sưả cửa hàng"
+
   controllers:
     contacts:
       create:
@@ -64,6 +78,14 @@ vi:
 
       find_contact:
         contact_fail_find: "Không tìm thấy liên hệ"
+      
+    shops:
+      create:
+        shop_created: "Đã tạo cửa hàng"
+        shop_no_create: "Tạo cửa hàng không thành công"
+
+      find_shop:
+        shop_fail_find: "Không tìm thấy liên hệ"
 
   contacts:
     form_contact:

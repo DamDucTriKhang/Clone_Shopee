@@ -14,6 +14,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true, on: :edit
   
   has_one :cart
+  has_one :shop
 	has_many :contacts
   has_many :vouchers, through: :user_voucher
 
