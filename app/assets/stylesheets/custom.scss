@@ -751,3 +751,64 @@ select#contact_contact_type {
   margin-bottom: 5px;
   color: #797979;
 }
+
+// show contacts 
+
+.main_contacts_body {
+  padding: 20px 4px 20px 50px;
+}
+
+.main_contacts_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid #efefef
+}
+
+.head_left_text {
+  font-size: 20px;
+  color: #464646;
+}
+
+.btn-danger{
+  background: linear-gradient(-180deg, #f53d2d, #f63) !important;
+}
+
+.contacts_body_label_left {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.contacts_body_label_value {
+  display: flex;
+  gap: 30px;
+}
+
+.contacts_body_label_value_left {
+  width: 100px;
+  text-align: end;
+}
+
+input#user_username {
+  width: 200px;
+}
+
+.contacts_body_label_right {
+  display: flex;
+  gap: 20px;
+}
+
+.contacts_body_link {
+  color: aliceblue !important;
+}
+
+.content_body_link1{
+  color: #333333;
+}
+
+a{
+  color: rgba(0, 0, 0, 0.65) !important;
+}

@@ -59,6 +59,12 @@ vi:
         contact_update: "Cập nhật thành công"
         contact_fail_update: "Cập nhật thất bại"
 
+      destroy:
+        contact_delete: "Đã xóa contact"
+
+      find_contact:
+        contact_fail_find: "Không tìm thấy liên hệ"
+
   contacts:
     form_contact:
       first_last_name: "Họ và tên"
@@ -74,6 +80,18 @@ vi:
 
     edit:
       edit_address: "Sửa địa chỉ"
+
+    show:
+      first_last_name: "Họ và tên"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      address_type: "Loại địa chỉ :"
+      my_address: "Địa chỉ của tôi"
+      first_last_name: "Họ và tên"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      update: "Cập nhật"
+      delete: "Xóa"
 
   enums:
     contact:

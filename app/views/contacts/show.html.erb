@@ -1,0 +1,78 @@
+<main class="main_container">
+  <%= render 'users/sidebar'%>    
+  <div class="main_content">
+    <div class="main_contacts_head">
+      <div class="head_left">
+        <div class="head_left_text"><%= t('.my_address') %></div>
+      </div>
+      <div class="head_right">
+        <button class = "btn btn-danger">
+          <div class="right_buttom">
+            <div class="buttom_icon">
+            </div>
+            <div class="buttom_text">
+              <%= link_to t('.my_address'), new_contact_path, class: 'contacts_body_link' %>
+            <div>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+    <div class="main_contacts_body">
+      <% @contacts.each do |contact| %>
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.first_last_name') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= contact.contact_name %>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_body_label_right">
+            <div class="contacts_body_label_right_text">
+              <%= link_to t('.update'), edit_contact_path(contact.id), class: 'contacts_body_link1' %>
+            </div>
+            <div class="contacts_body_label_right_text1">
+              <%= link_to t('.delete'), contact, method: :delete, data: { confirm: "You sure?" } %>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.phone') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= contact.phone %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.address') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= contact.address %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      <%end%>
+    <div>
+
+    
+  </div>
+</main>
