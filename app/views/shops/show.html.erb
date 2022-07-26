@@ -1,0 +1,66 @@
+<main class="main_container">    
+  <div class="main_content">
+    <div class="main_contacts_head">
+      <div class="head_left">
+        <div class="head_left_text"><%= t('.my_product') %></div>
+      </div>
+    </div>
+    
+    <div class="main_contacts_body">
+      <% @products.each do |product| %>
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.name') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= product.name %>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_body_label_right">
+            <div class="contacts_body_label_right_text">
+              <%= link_to t('.update_product'), class: 'contacts_body_link1' %>
+            </div>
+            <div class="contacts_body_label_right_text1">
+              <%= link_to t('.delete_product') %>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.description') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= product.description %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.price') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= product.price %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      <%end%>
+    <div>
+
+    
+  </div>
+</main>

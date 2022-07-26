@@ -1,7 +1,12 @@
 class ShopsController < ApplicationController
+  before_action :find_shop, only: [:show]
 
   def new
     @shop = Shop.new
+  end
+
+  def show
+    @products = @shop.products
   end
 
   def create
