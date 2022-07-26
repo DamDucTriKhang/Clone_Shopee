@@ -59,33 +59,15 @@ vi:
     edit:
       edit_shop: "Sưả cửa hàng"
 
-  controllers:
-    contacts:
-      create:
-        contact_created: "Tạo thành công"
-        contact_no_create: "Tạo không thành công"
-
-      edit:
-        access: "Bạn không có quyền truy cập"
-        find_contact: "Không tìm thấy liên hệ"
-
-      update:
-        contact_update: "Cập nhật thành công"
-        contact_fail_update: "Cập nhật thất bại"
-
-      destroy:
-        contact_delete: "Đã xóa contact"
-
-      find_contact:
-        contact_fail_find: "Không tìm thấy liên hệ"
-      
-    shops:
-      create:
-        shop_created: "Đã tạo cửa hàng"
-        shop_no_create: "Tạo cửa hàng không thành công"
-
-      find_shop:
-        shop_fail_find: "Không tìm thấy liên hệ"
+    show:
+      name: "Tên"
+      description: "Mô tả"
+      price: "Giá"
+      company: "Công ty"
+      submit: "nộp"
+      update_product: "Cập nhật"
+      delete_product: "Xóa"
+      my_product: "Sản phẩm của tôi"
 
   contacts:
     form_contact:
@@ -114,6 +96,34 @@ vi:
       address: "Địa chỉ"
       update: "Cập nhật"
       delete: "Xóa"
+
+  controllers:
+    contacts:
+      create:
+        contact_created: "Tạo thành công"
+        contact_no_create: "Tạo không thành công"
+
+      edit:
+        access: "Bạn không có quyền truy cập"
+        find_contact: "Không tìm thấy liên hệ"
+
+      update:
+        contact_update: "Cập nhật thành công"
+        contact_fail_update: "Cập nhật thất bại"
+
+      destroy:
+        contact_delete: "Đã xóa contact"
+
+      find_contact:
+        contact_fail_find: "Không tìm thấy liên hệ"
+      
+    shops:
+      create:
+        shop_created: "Đã tạo cửa hàng"
+        shop_no_create: "Tạo cửa hàng không thành công"
+
+      find_shop:
+        shop_fail_find: "Không tìm thấy liên hệ"
 
   enums:
     contact:

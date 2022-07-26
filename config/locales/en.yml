@@ -90,6 +90,39 @@ en:
     edit:
       edit_shop: "Edit shop"
 
+    show:
+      name: "name"
+      description: "description"
+      price: "price"
+      update_product: "Update"
+      delete_product: "Delete"
+      my_product: "My product"
+
+  contacts:
+    form_contact:
+      first_last_name: "First last name"
+      phone: "Phone number"
+      address: "Address"
+      address_type: "Address type :"
+      home: "Home"
+      company: "Company"
+      submit: "Submit"
+
+    new:
+      new_address: "New address"
+
+    edit:
+      edit_address: "Edit address"
+
+    show:
+      first_last_name: "First last name"
+      phone: "Phone"
+      address: "Address"
+      address_type: "Address Type :"
+      my_address: "My address"
+      update: "Update"
+      delete: "Delete"
+
   controllers:
     contacts:
       create:
@@ -117,32 +150,6 @@ en:
 
       find_shop:
         contact_fail_find: "Không tìm thấy liên hệ"
-
-
-  contacts:
-    form_contact:
-      first_last_name: "First last name"
-      phone: "Phone number"
-      address: "Address"
-      address_type: "Address type :"
-      home: "Home"
-      company: "Company"
-      submit: "Submit"
-
-    new:
-      new_address: "New address"
-
-    edit:
-      edit_address: "Edit address"
-
-    show:
-      first_last_name: "First last name"
-      phone: "Phone"
-      address: "Address"
-      address_type: "Address Type :"
-      my_address: "My address"
-      update: "Update"
-      delete: "Delete"
 
   enums:
     contact:
