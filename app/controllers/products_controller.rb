@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    byebug
     @products = Product.new(products_params)
     if @products.save
       flash[:success] = t("controllers.shops.create.shop_created")
@@ -26,7 +25,7 @@ class ProductsController < ApplicationController
     @products = Product.find_by(id: params[:id])
     if @products.nil?
       flash[:danger] = t("controllers.shops.create.shop_fail_find")
-      redirect_to shop_path
+      redirect_to shop_path (current_user.shop)
     end
   end
 end
