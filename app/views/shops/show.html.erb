@@ -28,7 +28,11 @@
               <div class="user_between_profile">
                 <div class="user_between_profile_1">
                   <span>
-                    Description : <%= @shop.description%>
+                    <i class="fa fa-file-text" aria-hidden="true"></i>
+                    Description : 
+                    <span class="size-procudt-form-show">
+                      <%= @shop.description%>
+                    </span>
                   <span>
                 </div>
               </div>
@@ -36,7 +40,11 @@
               <div class="user_between_profile">
                 <div class="user_between_profile_1">
                   <span>
-                    Address : <%= @shop.address%>
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                    Address : 
+                    <span class="size-procudt-form-show">
+                      <%= @shop.address%>
+                    </span>
                   <span>
                 </div>
               </div>
@@ -44,7 +52,11 @@
               <div class="user_between_profile">
                 <div class="user_between_profile_1">
                   <span>
-                    Phone : <%= @shop.phone%>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    Phone : 
+                    <span class="size-procudt-form-show">
+                      <%= @shop.phone%>
+                    </span>
                   <span>
                 </div>
               </div>
@@ -54,7 +66,11 @@
 
                 <div class="user_between_profile_1">
                   <span>
-                    Products : <%= @products.count%>
+                    <i class="fa fa-indent" aria-hidden="true"></i>
+                    Products : 
+                    <span class="size-procudt-form-show">
+                      <%= @products.count %>
+                    </span>
                   <span>
                 </div>
               </div>
@@ -131,6 +147,22 @@
               <div class="contacts_body_label_value_right">
                 <div class ="contacts_body_label_value_right_text">
                   <%= product.price %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts_body_field">
+          <div class="contacts_body_label_left">
+            <div class="contacts_body_label_value">
+              <div class="contacts_body_label_value_left">
+                <%= t('.price') %>
+              </div>
+              <div class="contacts_body_label_value_right">
+                <div class ="contacts_body_label_value_right_text">
+                  <%= image_tag product.image if product.image.attached? %>
+                </div>
               </div>
             </div>
           </div>
