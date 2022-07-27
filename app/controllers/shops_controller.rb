@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-  before_action :find_shop, only: [:show]
+  before_action :find_shop, only: [:show, :edit, :update]
 
   def new
     @shop = Shop.new
@@ -17,6 +17,28 @@ class ShopsController < ApplicationController
     else
       flash[:danger] = t("controllers.shops.create.shop_no_create")
       render :new
+    end
+  end
+
+  def edit
+    if @shop.present?
+      unless @shop.user.id == current_user.id
+        flash[:danger] = t("controllers.contacts.edit.access")
+        redirect_to root_path
+      end
+    else
+      flash[:danger] = t("controllers.contacts.edit.find_contact")
+      redirect_to new_shop_path
+    end
+  end
+
+  def update
+    if @shop.update(shops_params)
+      flash[:success] = t("controllers.contacts.update.contact_update")
+      redirect_to shop_path(current_user)
+    else
+      flash[:danger] = t("controllers.contacts.update.contact_fail_update")
+      render :edit
     end
   end
 

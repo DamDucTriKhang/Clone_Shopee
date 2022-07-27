@@ -1,5 +1,83 @@
 <main class="main_container">    
   <div class="main_content">
+    <div class="main_shop">
+        <div class="main_shop_show_user">
+          <div class="main_shop_show_user_left">
+            <div class="main_shop_show_user_left_info">
+              <div class="main_shop_show_user_left_info1">
+                <div class="main_shop_show_user_left_info_left">
+                  <img src="https://i.pinimg.com/736x/b1/d3/a6/b1d3a6d64e26399b57e51b0bd77c6c19.jpg" alt="avatar" class="user_avatar" />
+                </div>
+                <div class="main_shop_show_user_left_info_right">
+                  <%= @shop.name%>
+                </div>
+              </div>
+            </div>
+            <div class="buttom">
+              <button class="main_shop_show_user_left_follow">
+                <div class="main_shop_show_user_left_bottum">
+                  <div class="main_shop_show_user_left_bottum_follow">
+                  Follow
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="main_shop_show_user_right">
+            <div class="main_shop_show_user_right_between">
+              <div class="user_between_profile">
+                <div class="user_between_profile_1">
+                  <span>
+                    Description : <%= @shop.description%>
+                  <span>
+                </div>
+              </div>
+
+              <div class="user_between_profile">
+                <div class="user_between_profile_1">
+                  <span>
+                    Address : <%= @shop.address%>
+                  <span>
+                </div>
+              </div>
+
+              <div class="user_between_profile">
+                <div class="user_between_profile_1">
+                  <span>
+                    Phone : <%= @shop.phone%>
+                  <span>
+                </div>
+              </div>
+            </div>
+            <div class="main_shop_show_user_right_right">
+              <div class="user_between_profile">
+
+                <div class="user_between_profile_1">
+                  <span>
+                    Products : <%= @products.count%>
+                  <span>
+                </div>
+              </div>
+
+              <div class="user_between_profile">
+                <div class="user_between_profile_1">
+                  <span>
+                    Following
+                  <span>
+                </div>
+              </div>
+
+              <div class="user_between_profile">
+                <div class="user_between_profile_1">
+                  <span>
+                    Followers
+                  <span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <div class="main_contacts_head">
       <div class="head_left">
         <div class="head_left_text"><%= t('.my_product') %></div>
@@ -60,7 +138,5 @@
         <hr>
       <%end%>
     <div>
-
-    
   </div>
 </main>
