@@ -1,28 +1,29 @@
 <div class="main_content_body">
-  <%= form_for @products do |f| %>
+  <%= form_for @product do |f| %>
     <form class="content_body_info">
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :name, class: "form-control"%>
+          <%= f.text_field :name, class: "form-control", placeholder: t('.name')%>
           <%= f.hidden_field :shop_id, value: current_user.shop.id, class: "form-control"%>
         </div>
       </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :description, class: "form-control"%>
+          <%= f.text_field :description, class: "form-control", placeholder: t('.name')%>
         </div>
       </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :price, class: "form-control"%>
+          <%= f.text_field :price, class: "form-control", placeholder: t('.price')%>
         </div>
       </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
           <%= f.file_field :image, class: "form-control"%>
+          <img id="blah" src="#"/>
         </div>
       </div>
       
@@ -30,7 +31,7 @@
         <div class="content_form_label_detail">
           <div class="content_form_label"></div>
           <div class="content_body_value">
-            <%= f.submit "submit", class: "btn btn-primary" %>
+            <%= f.submit t('.submit'), class: "btn btn-primary" %>
           </div>
         </div>
       </div>
