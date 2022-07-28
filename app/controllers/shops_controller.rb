@@ -3,6 +3,10 @@ class ShopsController < ApplicationController
 
   def new
     @shop = Shop.new
+    if current_user.shop.present?
+      flash[:danger] = "shop đã tồn tại"
+      redirect_to shop_path(current_user)
+    end
   end
 
   def show
@@ -52,7 +56,7 @@ class ShopsController < ApplicationController
     @shop = Shop.find_by(id: params[:id])
     if @shop.nil?
       flash[:danger] = t("controllers.shops.create.shop_fail_find")
-      redirect_to shop_path
+      redirect_to shop_path(current_user.shop)
     end
   end
 end

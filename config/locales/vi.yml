@@ -68,6 +68,8 @@ vi:
       update_product: "Cập nhật"
       delete_product: "Xóa"
       my_product: "Sản phẩm của tôi"
+      image: "Ảnh"
+      create_product: "Tạo sản phẩm"
 
   contacts:
     form_contact:
@@ -97,6 +99,17 @@ vi:
       update: "Cập nhật"
       delete: "Xóa"
 
+  products:
+    form_product:
+      name: "Tên"
+      description: "Mô tả"
+      price: "Giá"
+      submit: "Nộp"
+    new:
+      new_product: "Tạo sản phẩm"
+    edit:
+      edit_product: "Cập nhật sản phẩm"
+
   controllers:
     contacts:
       create:
@@ -116,6 +129,25 @@ vi:
 
       find_contact:
         contact_fail_find: "Không tìm thấy liên hệ"
+
+    products:
+      create:
+        product_created: "Tạo thành công"
+        product_no_create: "Tạo không thành công"
+      
+      edit:
+        access: "Bạn không có quyền truy cập"
+        find_product: "Không tìm thấy sản phẩm"
+
+      update:
+        product_update: "Cập nhật thành công"
+        product_fail_update: "Cập nhật thất bại"
+
+      destroy:
+        product_delete: "Đã xóa sản phẩm"
+
+      find_product:
+        product_fail_find: "không tìm thấy sản phẩm"
       
     shops:
       create:

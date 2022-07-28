@@ -97,6 +97,8 @@ en:
       update_product: "Update"
       delete_product: "Delete"
       my_product: "My product"
+      image: "image"
+      create_product: "Create product"
 
   contacts:
     form_contact:
@@ -123,6 +125,19 @@ en:
       update: "Update"
       delete: "Delete"
 
+  products:
+    form_product:
+      name: "Name"
+      description: "Description"
+      price: "Price"
+      submit: "Submit"
+
+    new:
+      new_product: "New Product"
+    edit:
+      edit_product: "Edit_product"
+
+
   controllers:
     contacts:
       create:
@@ -142,6 +157,25 @@ en:
 
       find_contact:
         contact_fail_find: "contact does not exist"
+
+    products:
+      create:
+        product_created: "product created"
+        product_no_create: "product no create!"
+      
+      edit:
+        access: "You do not have access"
+        find_product: "Not found product"
+
+      update:
+        product_update: "product updated!"
+        product_fail_update: "product update fail"
+
+      destroy:
+        product_delete: "product_delete"
+
+      find_product:
+        product_fail_find: "product does not exist"
     
     shops:
       create:
@@ -150,6 +184,7 @@ en:
 
       find_shop:
         contact_fail_find: "Không tìm thấy liên hệ"
+
 
   enums:
     contact:
