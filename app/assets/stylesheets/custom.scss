@@ -899,3 +899,26 @@ ul, ol {
 input.danger_error{
   border-color: #ee4d2d;
 }
+
+// heder update
+.header_below_content_left {
+  display: flex;
+  font-size: 30px;
+  gap: 10px;
+}
+
+.header_below_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-outline {
+  display: flex;
+  width: 700px;
+}
+
+.header_below_right_icon {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
