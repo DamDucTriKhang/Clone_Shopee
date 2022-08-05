@@ -69,7 +69,7 @@
                     <i class="fa fa-indent" aria-hidden="true"></i>
                     Products : 
                     <span class="size-procudt-form-show">
-                      <%= @products.count %>
+                      <%= @count_products %>
                     </span>
                   <span>
                 </div>
@@ -99,15 +99,17 @@
         <div class="head_left_text"><%= t('.my_product') %></div>
       </div>
       <div class="head_right">
+        <% if @check_shop %>
         <button class = "btn btn-danger">
           <div class="right_buttom">
             <div class="buttom_icon">
             </div>
-            <div class="buttom_text">
-              <%= link_to t('.create_product'), new_product_path, class: 'contacts_body_link' %>
-            <div>
+              <div class="buttom_text">
+                <%= link_to t('.create_product'), new_product_path, class: 'contacts_body_link' %>
+              <div>
           </div>
         </button>
+        <% end %>
       </div>
     </div>
     
@@ -126,12 +128,12 @@
             </div>
           </div>
           <div class="contacts_body_label_right">
-            <% if current_user.shop.id == product.shop.id %>
+            <% if @check_shop %>
               <div class="contacts_body_label_right_text">
                 <%= link_to t('.update_product'), edit_product_path(product.id), class: 'contacts_body_link1' %>
               </div>
               <div class="contacts_body_label_right_text1">
-                  <%= link_to t('.delete'), product, method: :delete, data: { confirm: "You sure?" } %>
+                  <%= link_to t('.delete'), product, method: :delete, data: { confirm: t('common.delete_confirm') } %>
               </div>
             <% end %>
           </div>
@@ -145,7 +147,7 @@
               </div>
               <div class="contacts_body_label_value_right">
                 <div class ="contacts_body_label_value_right_text">
-                  <%= product.description %>
+                  <%= simple_format(product.description) %>
               </div>
             </div>
           </div>
@@ -165,23 +167,23 @@
             </div>
           </div>
         </div>
-
-        <div class="contacts_body_field">
-          <div class="contacts_body_label_left">
-            <div class="contacts_body_label_value">
-              <div class="contacts_body_label_value_left">
-                <%= t('.image') %>
-              </div>
-              <div class="contacts_body_label_value_right">
-                <div class ="contacts_body_label_value_right_text">
-                  <%= image_tag product.image if product.image.attached? %>
+          <div class="contacts_body_field">
+            <div class="contacts_body_label_left">
+              <div class="contacts_body_label_value">
+                <div class="contacts_body_label_value_left">
+                  <%= t('.image') %>
+                </div>
+                <div class="contacts_body_label_value_right">
+                  <div class ="contacts_body_label_value_right_text">
+                    <%= image_tag product.image if product.image.attached? %>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <hr>
       <%end%>
     <div>
   </div>
+  <%= paginate @products %>
 </main>

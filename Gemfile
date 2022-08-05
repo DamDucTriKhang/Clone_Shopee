@@ -29,6 +29,7 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rails-i18n'
 gem 'enum_help'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

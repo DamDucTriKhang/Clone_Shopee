@@ -37,7 +37,7 @@
               <%= link_to t('.update'), edit_contact_path(contact.id), class: 'contacts_body_link1' %>
             </div>
             <div class="contacts_body_label_right_text1">
-              <%= link_to t('.delete'), contact, method: :delete, data: { confirm: "You sure?" } %>
+              <%= link_to t('.delete'), contact, method: :delete, data: { confirm: t('common.delete_confirm') } %>
             </div>
           </div>
         </div>
