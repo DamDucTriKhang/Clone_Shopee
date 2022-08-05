@@ -780,6 +780,7 @@ select#contact_contact_type {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  word-break: break-word;
 }
 
 .contacts_body_label_value {
@@ -807,10 +808,6 @@ input#user_username {
 
 .content_body_link1{
   color: #333333;
-}
-
-a{
-  color: rgba(0, 0, 0, 0.65) !important;
 }
 
 // show shop
@@ -880,4 +877,25 @@ a{
 
 img {
   width: 350px;
+}
+
+a.nav-link-1 {
+  color: aliceblue;
+}
+
+a.content_body_link1{
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.errors_messages {
+  margin: -20px 0px 20px 0px;
+  color: #ee4d2d;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input.danger_error{
+  border-color: #ee4d2d;
 }

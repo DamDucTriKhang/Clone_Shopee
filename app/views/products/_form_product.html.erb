@@ -3,27 +3,46 @@
     <form class="content_body_info">
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :name, class: "form-control", placeholder: t('.name')%>
+          <%= f.text_field :name, class: "form-control#{ f.object.errors.messages.presence ? ' danger_error' : '' }", placeholder: t('.name')%>
           <%= f.hidden_field :shop_id, value: current_user.shop.id, class: "form-control"%>
         </div>
       </div>
+      <div class="errors_messages">
+        <ul>
+          <%f.object.errors.messages[:name].each do |name_error|%>
+            <li> <%= name_error %> </li>
+          <%end%>
+        </ul>
+      </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :description, class: "form-control", placeholder: t('.name')%>
+          <%= f.text_area :description, class: "form-control", placeholder: t('.description')%>
         </div>
       </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
-          <%= f.text_field :price, class: "form-control", placeholder: t('.price')%>
+          <%= f.text_field :price, class: "form-control#{ f.object.errors.messages.presence ? ' danger_error' : '' }", placeholder: t('.price')%>
         </div>
+      </div>
+
+      <div class="errors_messages">
+        <ul>
+          <%f.object.errors.messages[:price].each do |name_error|%>
+            <li><%= name_error%></li>
+          <%end%>
+        </ul>
       </div>
 
       <div class="content_body_field">
         <div class="content_body_value">
           <%= f.file_field :image, class: "form-control"%>
-          <img id="blah" src="#"/>
+          <%if f.object.image.attached?%>
+            <%= image_tag f.object.image, id: 'blah' %>
+          <%else%>
+            <img id="blah" src="">
+          <%end%>
         </div>
       </div>
       
@@ -38,3 +57,13 @@
     </form>
   <% end %>
 </div>
+
+<script>
+  $('#product_image').on('change', function(e) {
+    let file = e.target.files[0];
+    if (file) {
+      $('#blah').attr('src',  URL.createObjectURL(file));
+      $('#blah').removeClass('d-none');
+    }
+  })
+</script>

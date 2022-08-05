@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  common:
+    delete_confirm: "You sure?"
   users:
     show:
       name: "Name"
@@ -65,7 +67,7 @@ en:
 
   layouts:
     header:
-      seller_channel: "Seller Channel"
+      seller_channel: "My shop"
       download: "Download"
       connection: "Connection"
       notify: "Notify"
@@ -75,30 +77,7 @@ en:
       logout: "Logout"
       login: "Login"
       my_profile: "My profile"
-
-  shops:
-    form_shop:
-      name: "name"
-      description: "description"
-      address: "address"
-      phone: "phone"
-      submit: "submit"
-
-    new:
-      create_shop: "Create_shop"
-
-    edit:
-      edit_shop: "Edit shop"
-
-    show:
-      name: "name"
-      description: "description"
-      price: "price"
-      update_product: "Update"
-      delete_product: "Delete"
-      my_product: "My product"
-      image: "image"
-      create_product: "Create product"
+      home_page: Home page
 
   contacts:
     form_contact:
@@ -121,9 +100,27 @@ en:
       phone: "Phone"
       address: "Address"
       address_type: "Address Type :"
-      my_address: "My address"
+      my_address: "New address"
       update: "Update"
       delete: "Delete"
+
+      create:
+      contact_created: "Contact created"
+      contact_no_create: "Contact no create!"
+    
+    edit:
+      access: "You do not have access"
+      find_contact: "Not found contact"
+
+    update:
+      contact_update: "Contact updated!"
+      contact_fail_update: "Contact update fail"
+
+    destroy:
+      contact_delete: "Contact_delete"
+
+    find_contact:
+      contact_fail_find: "Contact does not exist"
 
   products:
     form_product:
@@ -137,53 +134,57 @@ en:
     edit:
       edit_product: "Edit_product"
 
-
-  controllers:
-    contacts:
-      create:
-        contact_created: "Contact created"
-        contact_no_create: "Contact no create!"
-      
-      edit:
-        access: "You do not have access"
-        find_contact: "Not found contact"
-
-      update:
-        contact_update: "Contact updated!"
-        contact_fail_update: "Contact update fail"
-
-      destroy:
-        contact_delete: "contact_delete"
-
-      find_contact:
-        contact_fail_find: "contact does not exist"
-
-    products:
-      create:
-        product_created: "product created"
-        product_no_create: "product no create!"
-      
-      edit:
-        access: "You do not have access"
-        find_product: "Not found product"
-
-      update:
-        product_update: "product updated!"
-        product_fail_update: "product update fail"
-
-      destroy:
-        product_delete: "product_delete"
-
-      find_product:
-        product_fail_find: "product does not exist"
+    create:
+      product_created: "Product created"
+      product_no_create: "Product no create!"
     
-    shops:
-      create:
-        shop_created: "Shop created"
-        shop_no_create: "Shop no create!"
+    edit:
+      access: "You do not have access"
+      find_product: "Not found product"
 
-      find_shop:
-        contact_fail_find: "Không tìm thấy liên hệ"
+    update:
+      product_update: "Product updated!"
+      product_fail_update: "Product update fail"
+
+    destroy:
+      product_delete: "Product delete"
+
+    find_product:
+      product_fail_find: "Product does not exist"
+  
+  shops:
+    create:
+      shop_created: "Shop created"
+      shop_no_create: "Shop no create!"
+
+    find_shop:
+      shop_fail_find: "No contact found"
+
+    new:
+      shop_already: "Shop_already"
+    
+    form_shop:
+      name: "name"
+      description: "description"
+      address: "address"
+      phone: "phone"
+      submit: "submit"
+
+    new:
+      create_shop: "Create_shop"
+
+    edit:
+      edit_shop: "Edit shop"
+
+    show:
+      name: "name"
+      description: "description"
+      price: "price"
+      update_product: "Update"
+      delete: "Delete"
+      my_product: "My product"
+      image: "image"
+      create_product: "Create product"
 
 
   enums:

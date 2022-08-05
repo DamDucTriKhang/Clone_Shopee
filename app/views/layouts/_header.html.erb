@@ -2,7 +2,9 @@
 	<div class="header_container">
 		<div class="header_top">
 			<div class="header_top_left">
-				<span class="header_top_left_item"><%= t('.seller_channel') %></span>
+				<span class="header_top_left_item">
+          <%= link_to t('.home_page'), root_path, class: "nav-link" %>
+        </span>
 				<span class="header_top_left_item"><%= t('.download') %></span>
 				<span class="header_top_left_item"><%= t('.connection') %> </span>
 			</div>
@@ -15,8 +17,8 @@
 								<%= t('.vietnamese') %>
 							</button>
 							<div class="dropdown-content">
-								<%= link_to t('.english'), locale:"en", class: "dropdown-item" %>
-								<%= link_to t('.vietnamese'), locale:"vi", class: "dropdown-item" %>
+								<%= link_to " Tiếng Việt ", locale:"vi", class: "dropdown-item" %>
+								<%= link_to " English ", locale:"en", class: "dropdown-item" %>
 							</div>
 						</div>
 				<span class="header_top_right_avt_group">
@@ -28,6 +30,7 @@
 							</button>
 							<div class="dropdown-content">
 								<%= link_to t('.my_profile'), user_path(id: current_user.id), class: "dropdown-item" %>
+                <%= link_to t('.seller_channel'), shop_path(current_user.shop), class: "dropdown-item" %>
 								<%= link_to t('.logout'), destroy_user_session_path, class: "dropdown-item" %>
 							</div>
 						</div>
@@ -40,7 +43,16 @@
 			</div>
 		</div>
 
-		<div class="header_below"></div>
+		<div class="header_below">
+      <div class="">
+        <div class="header_below_left">
+        </div>
+        <div class="header_below_between">
+        </div>
+        <div class="header_below_right">
+        </div>
+      </div>
+    </div>
 	</div>
 	<% flash.each do |message_type, message| %>
     <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>

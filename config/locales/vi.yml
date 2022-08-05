@@ -1,4 +1,6 @@
 vi:
+  common:
+    delete_confirm: "Bạn chắc chứ ?"
   users:
     show:
       name: "Tên"
@@ -34,7 +36,7 @@ vi:
 
   layouts:
     header:
-      seller_channel: "Người bán"
+      seller_channel: "Cửa hàng của tôi"
       download: "Tải ứng dụng"
       connection: "Kết nối"
       notify: "Thông báo"
@@ -44,6 +46,7 @@ vi:
       logout: "Đăng xuất"
       login: "Đăng nhập"
       my_profile: "Hồ sơ của tôi"
+      home_page: "Trang chủ"
 
   shops:
     form_shop:
@@ -66,7 +69,7 @@ vi:
       company: "Công ty"
       submit: "nộp"
       update_product: "Cập nhật"
-      delete_product: "Xóa"
+      delete: "Xóa"
       my_product: "Sản phẩm của tôi"
       image: "Ảnh"
       create_product: "Tạo sản phẩm"
@@ -92,7 +95,7 @@ vi:
       phone: "Số điện thoại"
       address: "Địa chỉ"
       address_type: "Loại địa chỉ :"
-      my_address: "Địa chỉ của tôi"
+      my_address: "Tạo mới"
       first_last_name: "Họ và tên"
       phone: "Số điện thoại"
       address: "Địa chỉ"
@@ -110,52 +113,61 @@ vi:
     edit:
       edit_product: "Cập nhật sản phẩm"
 
-  controllers:
-    contacts:
-      create:
-        contact_created: "Tạo thành công"
-        contact_no_create: "Tạo không thành công"
+  contacts:
+    create:
+      contact_created: "Tạo thành công"
+      contact_no_create: "Tạo không thành công"
 
-      edit:
-        access: "Bạn không có quyền truy cập"
-        find_contact: "Không tìm thấy liên hệ"
+    edit:
+      access: "Bạn không có quyền truy cập"
+      find_contact: "Không tìm thấy liên hệ"
 
-      update:
-        contact_update: "Cập nhật thành công"
-        contact_fail_update: "Cập nhật thất bại"
+    update:
+      contact_update: "Cập nhật thành công"
+      contact_fail_update: "Cập nhật thất bại"
 
-      destroy:
-        contact_delete: "Đã xóa contact"
+    destroy:
+      contact_delete: "Đã xóa contact"
 
-      find_contact:
-        contact_fail_find: "Không tìm thấy liên hệ"
 
-    products:
-      create:
-        product_created: "Tạo thành công"
-        product_no_create: "Tạo không thành công"
-      
-      edit:
-        access: "Bạn không có quyền truy cập"
-        find_product: "Không tìm thấy sản phẩm"
+    find_contact:
+      contact_fail_find: "Không tìm thấy liên hệ"
 
-      update:
-        product_update: "Cập nhật thành công"
-        product_fail_update: "Cập nhật thất bại"
+  products:
+    create:
+      product_created: "Tạo thành công"
+      product_no_create: "Tạo không thành công"
+    
+    edit:
+      access: "Bạn không có quyền truy cập"
+      find_product: "Không tìm thấy sản phẩm"
 
-      destroy:
-        product_delete: "Đã xóa sản phẩm"
+    update:
+      product_update: "Cập nhật thành công"
+      product_fail_update: Cập nhật thất bại
 
-      find_product:
-        product_fail_find: "không tìm thấy sản phẩm"
-      
-    shops:
-      create:
-        shop_created: "Đã tạo cửa hàng"
-        shop_no_create: "Tạo cửa hàng không thành công"
+    destroy:
+      product_delete: "Đã xóa sản phẩm"
 
-      find_shop:
-        shop_fail_find: "Không tìm thấy liên hệ"
+    find_product:
+      product_fail_find: "không tìm thấy sản phẩm"
+
+    form_product:
+      name: "Tên"
+      description: "Mô tả"
+      price: "Giá"
+      submit: "Nộp"
+    
+  shops:
+    create:
+      shop_created: "Đã tạo cửa hàng"
+      shop_no_create: "Tạo cửa hàng không thành công"
+
+    find_shop:
+      shop_fail_find: "Không tìm thấy cửa hàng"
+
+    new:
+      shop_already: "Shop already"
 
   enums:
     contact:
