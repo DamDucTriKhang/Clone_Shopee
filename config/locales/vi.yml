@@ -1,6 +1,7 @@
 vi:
   common:
     delete_confirm: "Bạn chắc chứ ?"
+    find_confirm: "Không có quyền truy cập"
   users:
     show:
       name: "Tên"
@@ -49,6 +50,16 @@ vi:
       home_page: "Trang chủ"
 
   shops:
+    create:
+      shop_created: "Đã tạo cửa hàng"
+      shop_no_create: "Tạo cửa hàng không thành công"
+
+    find_shop:
+      shop_fail_find: "Không tìm thấy cửa hàng"
+
+    new:
+      shop_already: "Shop already"
+
     form_shop:
       name: "Tên"
       description: "Chi tiết cửa hàng"
@@ -157,17 +168,17 @@ vi:
       description: "Mô tả"
       price: "Giá"
       submit: "Nộp"
-    
-  shops:
-    create:
-      shop_created: "Đã tạo cửa hàng"
-      shop_no_create: "Tạo cửa hàng không thành công"
 
-    find_shop:
-      shop_fail_find: "Không tìm thấy cửa hàng"
-
-    new:
-      shop_already: "Shop already"
+  carts:
+    show:
+      my_cart: "Giỏ hàng của tôi"
+      name: "Tên"
+      price: "Giá"
+      image: "Ảnh"
+      delete: "Xóa"
+      gross_product: "Tổng sản phẩm :"
+      purchase: "Mua hàng"
+      price1: "Giá : "
 
   enums:
     contact:
