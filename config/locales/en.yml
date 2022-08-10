@@ -32,6 +32,7 @@
 en:
   common:
     delete_confirm: "You sure?"
+    find_confirm: "Not have access"
   users:
     show:
       name: "Name"
@@ -179,12 +180,24 @@ en:
     show:
       name: "name"
       description: "description"
-      price: "price"
+      price: "price :"
       update_product: "Update"
       delete: "Delete"
       my_product: "My product"
       image: "image"
       create_product: "Create product"
+  
+  carts:
+    show:
+      my_cart: "My cart"
+      name: "Name"
+      price: "Price"
+      image: "Image"
+      delete: "Delete"
+      gross_product: "Gross product :"
+      purchase: "Purchase"
+      price1: "Price : "
+
 
 
   enums:

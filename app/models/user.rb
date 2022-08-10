@@ -18,4 +18,17 @@ class User < ApplicationRecord
 	has_many :contacts
   has_many :vouchers, through: :user_voucher
 
+  after_create :check_cart
+  after_create :check_shop1
+
+  private
+
+  def check_shop1
+    create_shop unless shop
+  end
+
+  def check_cart
+    byebug
+    create_cart unless cart
+  end
 end

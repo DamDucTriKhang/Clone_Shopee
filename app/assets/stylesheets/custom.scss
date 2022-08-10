@@ -900,7 +900,7 @@ input.danger_error{
   border-color: #ee4d2d;
 }
 
-// heder update
+// header update
 .header_below_content_left {
   display: flex;
   font-size: 30px;
@@ -921,4 +921,34 @@ input.danger_error{
   font-size: 20px;
   margin-right: 10px;
   margin-top: 4px;
+}
+
+a.root_text {
+  color: white;
+}
+
+i.fa-solid.fa-cart-arrow-down {
+    color: white;
+}
+
+// giỏ hàng
+
+.main_contacts_body_buy_buttom {
+  background-color: red;
+  width: 200px;
+  height: 40px;
+}
+
+.main_contacts_body_buy_buttom_text {
+  display: flex;
+  justify-content: center;
+  line-height: 38px;
+  color: white;
+}
+
+.main_contacts_body_buy {
+  display: flex;
+  align-items: 100%;
+  justify-content: flex-end;
+  gap: 20px;
 }

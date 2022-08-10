@@ -1,7 +1,13 @@
 <main class="main_container">    
   <div class="main_content">
+    <h3><%= t('.my_cart') %></h3>
+    <hr>
     <div class="main_contacts_body">
-      <% @products.each do |product| %>
+      <% @line_items.each do |line_item| %>
+        <div class="box">
+          <input type="checkbox" value="<%= line_item.price %>" class="checkbox">
+          <label for="javaScrip"></label>
+        </div>
         <div class="contacts_body_field">
           <div class="contacts_body_label_left">
             <div class="contacts_body_label_value">
@@ -10,24 +16,17 @@
               </div>
               <div class="contacts_body_label_value_right">
                 <div class ="contacts_body_label_value_right_text">
-                  <%= product.name %>
+                  <%= line_item.product.name %>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="contacts_body_field">
-          <div class="contacts_body_label_left">
-            <div class="contacts_body_label_value">
-              <div class="contacts_body_label_value_left">
-                <%= t('.description') %>
+          <div class="contacts_body_label_right">
+              <div class="contacts_body_label_right_text1">
+                <%= link_to t('.delete'), line_item, method: :delete, data: { confirm: t('common.delete_confirm') } %>
               </div>
-              <div class="contacts_body_label_value_right">
-                <div class ="contacts_body_label_value_right_text">
-                  <%= simple_format(product.description) %>
-              </div>
-            </div>
           </div>
+
         </div>
 
         <div class="contacts_body_field">
@@ -38,7 +37,7 @@
               </div>
               <div class="contacts_body_label_value_right">
                 <div class ="contacts_body_label_value_right_text">
-                  <%= product.price %>
+                  <%= line_item.price %>
                 </div>
               </div>
             </div>
@@ -52,18 +51,30 @@
                 </div>
                 <div class="contacts_body_label_value_right">
                   <div class ="contacts_body_label_value_right_text">
-                    <%= image_tag product.image if product.image.attached? %>
+                    <%= image_tag line_item.product.image if line_item.product.image.attached? %>
                   </div>
                 </div>
-              </div>
-              <div class="contacts_body_field_add_text">
-                <%= link_to "Thêm vào giỏ hàng", line_items_path(product_id: product.id), method: :post, class:"btn btn-primary"%>
               </div>
             </div>
           </div>
         <hr>
-      <%end%>
+      <% end %>
+      <div class="main_contacts_body_buy">
+        <div class="main_contacts_body_buy_pay">
+          <div class="main_contacts_body_buy_pay_number_product">
+            <%= t('.gross_product') %> <span id="product-count">0</span>
+            <p id="sproductList"></p>
+          </div>
+          <div class="print-values">
+            <%= t('.price1') %><span id="valueList"></span>
+          </div>
+        </div>
+        <div class="main_contacts_body_buy_buttom">
+          <div class="main_contacts_body_buy_buttom_text">
+            <%= t('.purchase') %> 
+          </div>
+        </div>
+      </div>
     <div>
   </div>
-  <%= paginate @products %>
 </main>

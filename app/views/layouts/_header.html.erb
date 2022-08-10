@@ -13,24 +13,28 @@
 				<span><%= t('.notify') %></span>
 				<span><%= t('.support') %></span>
 				<div class="dropdown">
-							<button class="dropbtn">
-								<%= t('.vietnamese') %>
-							</button>
-							<div class="dropdown-content">
-								<%= link_to " Tiếng Việt ", locale:"vi", class: "dropdown-item" %>
-								<%= link_to " English ", locale:"en", class: "dropdown-item" %>
-							</div>
-						</div>
+          <button class="dropbtn">
+            <%= t('.vietnamese') %>
+          </button>
+          <div class="dropdown-content">
+            <%= link_to " Tiếng Việt ", locale:"vi", class: "dropdown-item" %>
+            <%= link_to " English ", locale:"en", class: "dropdown-item" %>
+          </div>
+				</div>
 				<span class="header_top_right_avt_group">
 					<img src="https://i.pinimg.com/736x/b1/d3/a6/b1d3a6d64e26399b57e51b0bd77c6c19.jpg" alt="avatar" class="header_top_right_avt">
 					<% if current_user.present? %>
 						<div class="dropdown">
 							<button class="dropbtn">
-								<%= current_user.username%>
+								<%= current_user.username %>
 							</button>
 							<div class="dropdown-content">
 								<%= link_to t('.my_profile'), user_path(id: current_user.id), class: "dropdown-item" %>
-                <%= link_to t('.seller_channel'), shop_path(current_user.shop), class: "dropdown-item" %>
+                <% if current_user.shop.present? %>
+                  <%= link_to t('.seller_channel'), shop_path(current_user.shop), class: "dropdown-item" %>
+                <% else %>
+                  <%= link_to t('.seller_channel'), new_shop_path, class: "dropdown-item" %>
+                <%end%>
 								<%= link_to t('.logout'), destroy_user_session_path, class: "dropdown-item" %>
 							</div>
 						</div>
@@ -50,7 +54,7 @@
             <i class="fa-solid fa-store"></i>
           </div>
           <div class="header_below_content_left_text">
-            Shopee
+            <%= link_to "Shopee", root_path, class: "root_text"%>
           </div>
         </div>
         <div class="header_below_between">
@@ -62,9 +66,13 @@
           </div>
         </div>
         <div class="header_below_right">
+        <% if current_user.present? %>
           <div class="header_below_right_icon">
-            <i class="fa-solid fa-cart-arrow-down"></i>
+            <%= link_to user_cart_path(current_user) do %>
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            <% end %>
           <div>
+        <%end%>
         </div>
       </div>
     </div>
